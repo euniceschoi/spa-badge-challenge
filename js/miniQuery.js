@@ -1,3 +1,4 @@
+
 /*!
  * minQuery
  */
@@ -6,22 +7,16 @@ $ = miniQuery
 
  function miniQuery(selector) {
 
-  // var sweetSelector = function(selector){
-    console.log(selector)
     if (selector.charAt(0) === "#"){
       selector = selector.slice(1)
-      console.log(selector)
       var element = document.getElementById(selector)
-      console.log(element)
     }else if(selector.charAt(0)=== "."){
       selector = selector.slice(1)
       var element = document.getElementsByClassName(selector)
     }else{
      var element = document.getElementsByTagName(selector)
     };
-  // };
 
-  console.log(element)
 
   element.hide = function(){
     if (!!element.length){
@@ -84,13 +79,13 @@ $ = miniQuery
     };
 
   element.getHTML = function(){
-    console.log("***GOTCHA***")
+    // console.log("***GOTCHA***")
     console.log(element.innerHTML)
     return element.innerHTML
 };
 
   element.setHTML = function(addition){
-    console.log("*** SETTER ***")
+    // console.log("*** SETTER ***")
     return element.innerHTML = addition
   }
 
@@ -134,4 +129,3 @@ miniQuery.ajax = function(options) {
 
     return ourPromise;
   }
-

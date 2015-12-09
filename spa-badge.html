@@ -13,28 +13,24 @@
     <div class="logo">
       <h1> SPA Badge </h1>
     </div>
-    <h1> SF Teachers and Mentors </h1>
-    <ul>
-      <li><a href="#">Brick</a></li>
-      <li><a href="#">Hunter</li>
-      <li><a href="#">Jared</a></li>
-      <li><a href="#">Jen</a></li>
-      <li><a href="#">Jordan</a></li>
-      <li><a href="#">Julian</a></li>
-      <li><a href="#">Shambhavi</a></li>
-      <li><a href="#">Walker</a></li>
-      <li><a href="sample-page.html">Sample Page</a></li>
+    <h1> Students</h1>
+    <ul id="list-of-students">
+
     </ul>
 
     <!-- The #each helper iterates over an array of items. -->
 
 
   </div>
- <script id="student-template" type="text/x-handlebars-template">
-    <p>{{text}}.</p>
+  <script id="student-template" type="text/x-handlebars-template">
+
+    {{#each student}}
+
+      <li>{{name}}</li>
+
+    {{/each}}
+
   </script>
 
-<!--Your new content will be displayed in here-->
-<div class="content-placeholder"></div>
 </body>
 </html>
